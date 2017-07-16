@@ -77,6 +77,12 @@ class TinderAPI(object):
 
         return self._request("delete", constants.CONTENT_BASE + "/media", data=data)
 
+    def register_phone(self, phone_number):
+	return self._post("/sendtoken", data={"phone_number": str(phone_number)})
+
+    def verify_phone(self, token):
+	return self._post("/validate", data={"token": str(code)})
+
     def recs(self, limit=10):
         return self._post("/user/recs", data={"limit": limit})
 

@@ -40,6 +40,12 @@ class Session(object):
     def update_profile(self, profile):
         return self._api.update_profile(profile)
 
+    def register_profile(self, phone_number):
+	return self._api.register_phone(phone_number)
+
+    def verify_profile(self, token):
+	return self._api.verify_phone(token)
+
     def update_location(self, latitude, longitude):
         return self._api.ping(latitude, longitude)
 
