@@ -83,6 +83,9 @@ class TinderAPI(object):
     def verify_phone(self, token):
 	return self._post("/validate", data={"token": str(code)})
 
+    def delete_account(self):
+	return self._delete("/profile")
+
     def recs(self, limit=10):
         return self._post("/user/recs", data={"limit": limit})
 
