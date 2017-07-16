@@ -29,6 +29,8 @@ SIMPLE_FIELDS = {"name", "bio", "birth_date", "ping_time"}
 
 VALID_PHOTO_SIZES = {84, 172, 320, 640}
 
+GIPHY_KEY = "fBEDuhnVCiP16"
+
 
 class ReportCause(Enum):
     Other = 0
